@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="awssite\**" />
+    <Content Remove="awssite\**" />
+    <EmbeddedResource Remove="awssite\**" />
+    <None Remove="awssite\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 

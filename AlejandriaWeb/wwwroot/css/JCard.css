@@ -1,0 +1,80 @@
+﻿.app-container{
+    text-align: center;
+}
+
+.jcard {
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    height: 20%;
+    border: 1px solid gray;
+    border-radius: 15px;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgba(228, 228, 228, 1);
+    cursor: pointer;
+    margin: 0px 10px;
+}
+
+.jcard:hover{
+    box-shadow: rgba(0,0,0,0.5) 0px 0px 15px;
+}
+
+.jcard:after{
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -210%;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+    /*background: rgba(255, 255, 255, 0.13);*/
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.13) 0%,
+        rgba(255, 255, 255, 0.13) 77%,
+        rgba(255, 255, 255, 0.5) 92%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.jcard:hover:after{
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+}
+
+.jcard:active:after{
+    opacity: 0;
+}
+
+    .jcard .icon {
+        width: 80%;
+        height: 80%;
+        align-content: center;
+        display: inline-block;
+        padding: 15px;
+    }
+
+        .jcard .icon img {
+            width: 100%;
+            height: 100%;
+        }
+
+    .jcard .title {
+        border-top: 1px solid gray;
+        text-align: center;
+        background-color: transparent;
+        height: 20%;
+    }
+
+        .jcard .title h2 {
+            margin: 0px;
+            padding: 10px;
+            font-size: 1vw;
+            font-weight: bold;
+        }
